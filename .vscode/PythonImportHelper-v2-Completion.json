@@ -1,0 +1,113 @@
+[
+    {
+        "label": "Notifier",
+        "importPath": "decorator.Notifier",
+        "description": "decorator.Notifier",
+        "isExtraImport": true,
+        "detail": "decorator.Notifier",
+        "documentation": {}
+    },
+    {
+        "label": "Notifier",
+        "importPath": "decorator.Notifier",
+        "description": "decorator.Notifier",
+        "isExtraImport": true,
+        "detail": "decorator.Notifier",
+        "documentation": {}
+    },
+    {
+        "label": "BaseDecorator",
+        "importPath": "decorator.BaseDecorator",
+        "description": "decorator.BaseDecorator",
+        "isExtraImport": true,
+        "detail": "decorator.BaseDecorator",
+        "documentation": {}
+    },
+    {
+        "label": "BaseDecorator",
+        "importPath": "decorator.BaseDecorator",
+        "description": "decorator.BaseDecorator",
+        "isExtraImport": true,
+        "detail": "decorator.BaseDecorator",
+        "documentation": {}
+    },
+    {
+        "label": "SMSDecorator",
+        "importPath": "decorator.SMSDecorator",
+        "description": "decorator.SMSDecorator",
+        "isExtraImport": true,
+        "detail": "decorator.SMSDecorator",
+        "documentation": {}
+    },
+    {
+        "label": "EmailDecorator",
+        "importPath": "decorator.EmailDecorator",
+        "description": "decorator.EmailDecorator",
+        "isExtraImport": true,
+        "detail": "decorator.EmailDecorator",
+        "documentation": {}
+    },
+    {
+        "label": "BaseDecorator",
+        "kind": 6,
+        "importPath": "decorator.BaseDecorator",
+        "description": "decorator.BaseDecorator",
+        "peekOfCode": "class BaseDecorator(Notifier):\n    def send(self, message: str):\n        self.notifier.send(message)\n    def __init__(self, notifier: Notifier):\n        self.notifier = notifier",
+        "detail": "decorator.BaseDecorator",
+        "documentation": {}
+    },
+    {
+        "label": "EmailDecorator",
+        "kind": 6,
+        "importPath": "decorator.EmailDecorator",
+        "description": "decorator.EmailDecorator",
+        "peekOfCode": "class EmailDecorator(BaseDecorator):\n    def send(self, message: str):\n        self.notifier.send(message)\n        print(\"sent via email: \" + message)",
+        "detail": "decorator.EmailDecorator",
+        "documentation": {}
+    },
+    {
+        "label": "Notifier",
+        "kind": 6,
+        "importPath": "decorator.Notifier",
+        "description": "decorator.Notifier",
+        "peekOfCode": "class Notifier:\n    def send(self, message: str):\n        pass",
+        "detail": "decorator.Notifier",
+        "documentation": {}
+    },
+    {
+        "label": "SMSDecorator",
+        "kind": 6,
+        "importPath": "decorator.SMSDecorator",
+        "description": "decorator.SMSDecorator",
+        "peekOfCode": "class SMSDecorator(BaseDecorator):\n    def send(self, message: str):\n        self.notifier.send(message)\n        print(\"sent via sms: \" + message)",
+        "detail": "decorator.SMSDecorator",
+        "documentation": {}
+    },
+    {
+        "label": "stack",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "stack = Notifier()\nstack = SMSDecorator(stack)\nstack = EmailDecorator(stack)\nstack.send(\"hello world!\")",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "stack",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "stack = SMSDecorator(stack)\nstack = EmailDecorator(stack)\nstack.send(\"hello world!\")",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "stack",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "stack = EmailDecorator(stack)\nstack.send(\"hello world!\")",
+        "detail": "main",
+        "documentation": {}
+    }
+]
