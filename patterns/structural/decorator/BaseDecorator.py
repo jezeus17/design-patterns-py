@@ -1,4 +1,6 @@
-from decorator.Notifier import Notifier
+
+
+from Notifier import Notifier
 
 
 class BaseDecorator(Notifier):

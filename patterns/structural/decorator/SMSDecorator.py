@@ -1,4 +1,4 @@
-from decorator.BaseDecorator import BaseDecorator
+from BaseDecorator import BaseDecorator
 
 
 class SMSDecorator(BaseDecorator):
